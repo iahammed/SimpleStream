@@ -1,0 +1,25 @@
+name: Test
+on:
+  - push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "15.x"
+      - uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - run: yarn --no-progress
+      - run: yarn build
+      - run: yarn test:unit
+      - uses: cypress-io/github-action@v2
+        with:
+          start: yarn serve
+          wait-on: "http://localhost:8080"
+          config-file: ./cypress.json
+        env:
+          CYPRESS_BASE_URL: "http://localhost:8080"
