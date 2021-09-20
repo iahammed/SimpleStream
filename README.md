@@ -6,67 +6,35 @@
 
 > Reports to: Frontend Software Development Manager
 
-> Time Allocation: 2 days
+> Time Allocation: 45 minutes
 
 ## Overview
 
 The purpose of this code test is to help us understand your style of coding, technical proficiency and decision-making process.
 
-We are looking at how you approach a problem and how closely you can follow a specification. Remember to show off your ability to write readable code that is maintainable and scalable.
+If you struggle with understanding the requirements, please don't hesitate to reach out for clarification.
 
-If you struggle with understanding the requirements, please forward your questions to your recruiter, so that we can assist you.
+We have provided a simple application boilerplate to get you started.
 
 ## Requirements
 
-We develop UI libraries for web apps, but also for Smart/Connected TV apps that have limited system resources available. Demonstrate your ability to build a web app in TypeScript with Vue.JS. We use vue-class-components internally but it’s not required.
+- Build a simple carousel component without using an existing carousel library
+  - It should display thumbnails of video content retrieved from the [API endpoint](http://hybridtv.ss7.tv/techtest/movies.json)
+  - Add any additional behaviours, interactions or features that you want, if you have time
+  - Any tests are a valued bonus
 
-See: https://vuejs.org/v2/guide/typescript.html
+There are many different solutions to the challenge. We are not looking a specific solution or even a complete solution. Instead we are more interested in your approach.
 
-You are required to build a simple application with a horizontal carousel displaying thumbnails of video content retrieved from the provided API endpoint and allow the user to watch the videos with a video player.  You should also provide satisfactory unit tests for the carousel and its interactions. We use jest internally but use any test suite you are comfortable with.
+We have provided a boilerplate component get you started at [`src/components/Carousel.vue`](./src/components/Carousel.vue). It includes some quick examples of `vue-class-components` and a simple call to the API endpoint using `axios`, but feel free to change this to suit your preferences.
 
-The following requirements for UI Components
+We also have [`tests/unit/Carousel.spec.ts`](./tests/unit/Carousel.spec.ts) and [`tests/e2e/specs/test.js`](./tests/e2e/specs/test.js) for unit and e2e tests respectively.
 
-- Horizontal carousel
-- Video player
+### Delivery requirements
 
-The following requirements for the carousel
-
-- Must not use a third-party/open-source carousel library
-- Must have unit tests. We are more interested in demonstrating how you structure your code to be testable and which areas you priorities writing unit tests for more than the test coverage.
-- Clicking on a carousel item will start playing the movie in the player
-- Carousel must paginate one page at a time
-- Show carousel pagination controls when hovering the carousel
-- Carousel must show 5 items per page on desktop and 2 items per page on mobile
-
-The following requirements for the Video player Component
-
-- Can use video.js as the video player library
-- Custom Play/Pause button for video player.
-
-The following requirements for UI Styling
-
-- Carousel:
-- Height: 600px
-- Carousel margin (x-axis): 40px
-- Items gutter: 10px
-- Items focus style: 2px border #FFD700
-- Play/Pause button
-- Focus style: Background #FFD700
-
-Available resources
-
-- API endpoint: http://hybridtv.ss7.tv/techtest/movies.json
-- Icons
-- Play button: http://hybridtv.ss7.tv/techtest/assets/icons/btn-play.png
-- Pause button: http://hybridtv.ss7.tv/techtest/assets/icons/btn-pause.png
-
-Submission rules
-
-- You will have two days to complete the code challenge.
-- Clone this repository and create a new repository in your own GitHub account (Please don't fork this repository in GitHub). Create a new branch for the code challenge and commit your changes on those branches. When you are done, please create pull requests for your changes into main so we can review the pull requests.
-- There are many different possible solutions and approaches to the challenge. We are not looking a specific solution but instead are more interested in your approach, how you've implemented your solution and how you structure & format your code.
-- You should try to follow SOLID principles as a general guideline.
-- Once completed, please send your repo url for review.
+- Clone this repo and create a new repo in your GitHub account
+  - Please don't fork this repo in GitHub or your solution will be visible through GitHub UI
+- Create a new branch for the code challenge
+- When you are done, please push and provide a link to your PR
 
 ## Project setup
 
@@ -113,13 +81,5 @@ yarn test:e2e
 ```
 
 yarn lint
-
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-```
 
 ```
