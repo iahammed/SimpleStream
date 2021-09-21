@@ -1,5 +1,5 @@
 <template>
-  <div @click="myClick" style="myStyle">carousel</div>
+  <div @click="myClick" :style="myStyle">carousel</div>
 </template>
 
 <script lang="ts">
