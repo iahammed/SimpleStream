@@ -36,6 +36,14 @@ We also have [`tests/unit/Carousel.spec.ts`](./tests/unit/Carousel.spec.ts) and 
 - Create a new branch for the code challenge
 - When you are done, please push and provide a link to your PR
 
+## Example
+
+You can see an example of a carousel here. We don't require you to copy it, but you are allowed to.
+
+![./example.png](./example.png)
+
+Clicking the right control/pagination button will scroll the carousel a full page. A left carousel control button will appear, and so on...
+
 ## Project setup
 
 ```
